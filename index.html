@@ -980,22 +980,25 @@ if (form) {
             return;
         }
 
-        // Nomor WhatsApp tujuan
+        // Nomor WhatsApp
         const phone = "6289656079691";
 
-        // Simpan teks asli tombol
+        // Simpan teks tombol
         const originalText = btn.innerHTML;
 
         // Loading
         btn.disabled = true;
         btn.innerHTML = `
             <i class="fa-solid fa-spinner fa-spin"></i>
-            <span class="ml-2">Menghubungkan...</span>
+            <span class="ml-2">Membuka WhatsApp...</span>
         `;
 
-        const text = `Halo Riyan,
+        // Isi pesan WhatsApp
+        const text = `RIEDIT | CLIENT INQUIRY
 
-Saya baru saja mengunjungi website RiEdit dan ingin mendiskusikan sebuah project.
+Halo Riyan,
+
+Saya baru saja mengunjungi website RiEdit dan tertarik untuk mendiskusikan sebuah project.
 
 ────────────────────────
 
@@ -1010,28 +1013,28 @@ ${message}
 
 ────────────────────────
 
-Mohon informasi mengenai estimasi biaya, waktu pengerjaan, dan alur kerja.
+Mohon informasi mengenai:
+• Estimasi biaya
+• Estimasi waktu pengerjaan
+• Tahapan kerja
 
-Terima kasih.`;
+Terima kasih.
 
-        
+— Dikirim melalui Website RiEdit`;
+
+        // Buka WhatsApp
         setTimeout(() => {
 
-            window.open(
-                `https://wa.me/${phone}?text=${encodeURIComponent(text)}`,
-                "_blank"
-            );
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+            window.open(url, "_blank");
 
             form.reset();
 
             btn.disabled = false;
             btn.innerHTML = originalText;
 
-            if (typeof alertCustom === "function") {
-                alertCustom("WhatsApp berhasil dibuka.");
-            }
-
-        }, 1000);
+        }, 700);
 
     });
 
