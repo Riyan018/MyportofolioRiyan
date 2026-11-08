@@ -292,9 +292,13 @@ html{
     <!-- Hero Section -->
 
    <section id="home" class=" min-h-screen flex items-center justify-center pt-28 md:pt-20 px-6 relative z-10">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center glass rounded-3xl p-6 md:p-8 shadow-xl">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center
+            rounded-3xl p-6 md:p-8
+            bg-white/25 backdrop-blur-2xl
+            border border-white/60
+            shadow-[0_8px_40px_rgba(100,140,220,0.15)]">
 
-    <!-- BAGIAN KIRI: DESKRIPSI -->
+    <!-- BAGIAN KIRI -->
     <div class="text-left">
         <p class="text-slate-700 leading-relaxed">
             Hi, I'm Riyadi! Over the past 4 years, I've been
@@ -312,11 +316,11 @@ html{
         </p>
     </div>
 
-    <!-- BAGIAN KANAN: GAMBAR -->
+    <!-- BAGIAN KANAN -->
     <div class="flex items-center justify-center">
         <img
             src="./assets/beranda.png"
-            alt="Portfolio Video Editing Riyadi"
+            alt="Portfolio Riyadi"
             class="w-full h-auto object-contain"
         >
     </div>
@@ -1246,6 +1250,15 @@ const observer = new IntersectionObserver((entries) => {
 }, {
     threshold: 0.5
 });
+
+body {
+    background: linear-gradient(
+        120deg,
+        #e0efff,
+        #ffffff,
+        #dceeff
+    );
+}
 
 sections.forEach((section) => {
     observer.observe(section);
