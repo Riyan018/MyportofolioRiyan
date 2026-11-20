@@ -8,14 +8,6 @@
    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-    // Counter Animation
-    document.addEventListener("DOMContentLoaded", function () {
-        const counters = document.querySelectorAll('.counter');
-        ...
-    });
-    </script>
-</script>
     
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -215,6 +207,15 @@ html{
     height:100%;
     object-fit:cover;
     display:block;
+}
+
+body {
+    background: linear-gradient(
+        120deg,
+        #e0efff,
+        #ffffff,
+        #dceeff
+    );
 }
     </style>
 </head>
@@ -755,7 +756,7 @@ html{
                 playsinline
                 preload="metadata">
 
-                <source src="https://res.cloudinary.com/ssyrbuuy/video/upload/v1784307365/Daily_content_2_o8cf34.mov"
+                <source src="https://res.cloudinary.com/ssyrbuuy/video/upload/f_mp4/v1784307365/Daily_content_2_o8cf34.mp4"
                         type="video/mp4">
             </video>
 
@@ -786,7 +787,7 @@ html{
                 playsinline
                 preload="metadata">
 
-                <source src="https://res.cloudinary.com/ssyrbuuy/video/upload/v1784307390/Dailycontent_Ghiina1_vb05ot.mov"
+                <source src="https://res.cloudinary.com/ssyrbuuy/video/upload/f_mp4/v1784307390/Dailycontent_Ghiina1_vb05ot.mp4"
                         type="video/mp4">
             </video>
 
@@ -1251,14 +1252,6 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.5
 });
 
-body {
-    background: linear-gradient(
-        120deg,
-        #e0efff,
-        #ffffff,
-        #dceeff
-    );
-}
 
 sections.forEach((section) => {
     observer.observe(section);
